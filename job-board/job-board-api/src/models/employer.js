@@ -5,9 +5,9 @@ const employerSchema  = new mongoose.Schema({
     location:{type:String, required:true},
     email:{type:String, required:true},
     password:{type:String, required:true},
-    website:{type:String},
+    website:{type:String, default:''},
     role:{type:String, default:'EMP'}
 },{timestamps:true});
 
 
-module.exports = model('employers', employerSchema);
+module.exports = mongoose.model('employers', employerSchema);
