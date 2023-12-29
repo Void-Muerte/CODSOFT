@@ -1,68 +1,27 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer components {
+  .nav-brand {
+    @apply font-satisfy font-thin text-3xl text-sky-900;
   }
-  a:hover {
-    color: #747bff;
+  .nav-container {
+    @apply flex sm:flex-row justify-center sm:justify-between  px-4  py-8 w-full border items-center bg-white max-w-[1200px] z-[2] fixed top-0;
   }
-  button {
-    background-color: #f9f9f9;
+  .log-btn {
+    @apply border-[0.05rem] border-sky-600 rounded-md outline outline-[0.2px] text-sky-600 hover:bg-sky-600
+            hover:text-white hover:outline-sky-600 hover:outline-offset-2 px-3 py-1.5 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-white;
+  }
+  .reset-btn {
+    @apply border-[0.05rem] border-rose-600 rounded-md outline outline-[0.2px] text-rose-600 hover:bg-rose-600
+            hover:text-white hover:outline-rose-600 hover:outline-offset-2 px-3 py-1.5 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-white;
+  }
+  .inp {
+    @apply border-[0.05rem] py-1.5 px-1 rounded-lg  focus:outline-sky-600 placeholder:text-start;
+  }
+  .save-btn {
+    @apply border-[0.05rem] border-sky-600 rounded-sm outline outline-[0.1px] text-sky-600 py-0.5 max-w-max px-1.5 self-end hover:bg-sky-600
+            hover:text-white hover:outline-sky-600 hover:outline-offset-2;
   }
 }

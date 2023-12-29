@@ -1,13 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const employerSchema  = new mongoose.Schema({
-    name:{type:String, required:true},
-    location:{type:String, required:true},
-    email:{type:String, required:true},
-    password:{type:String, required:true},
-    website:{type:String, default:''},
-    role:{type:String, default:'EMP'}
-},{timestamps:true});
+const employerSchema = new mongoose.Schema(
+  {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users",
+      required: true,
+    },
+    name: { type: String, required: true },
+    location: { type: String, required: true },
+    website: { type: String, default: "" },
+  },
+  { timestamps: true }
+);
 
-
-module.exports = mongoose.model('employers', employerSchema);
+module.exports = mongoose.model("employers", employerSchema);

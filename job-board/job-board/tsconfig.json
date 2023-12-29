@@ -22,10 +22,13 @@
     /* alias configuration*/
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@utils/*": ["utils/*"],
-      "@assets/*": ["assets/*"],
-      "@pages/*": ["pages/*"]
+      "@components/*": ["./components/*"],
+      "@pages/*": ["./pages/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@api/*": ["./api/*"],
+      "@utils/*": ["./utils/*"],
+      "@layouts/*": ["./layouts/*"],
+      "@modals/*": ["./modals/*"]
     }
   },
   "include": ["src"],
